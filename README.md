@@ -1,2 +1,2 @@
 # hero-re
-Reverse engineering of the HERO3 sensor used by Logitech mice
+Reverse engineering of the HERO sensor used by Logitech mice
