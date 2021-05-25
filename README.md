@@ -69,3 +69,11 @@ address | Funcion | Values | Info
  |  |  |
 0x0C | x or y DPI | 0x03 - 0xEF (allowable range might be larger, to be tested) | DPI = (value + 1) * 50
 0x0D | x or y DPI | 0x03 - 0xEF (allowable range might be larger, to be tested) | DPI = (value + 1) * 50
+
+## SROM
+
+the hero sensor needs firmware to be uploaded to it at startup, we call this SROM
+
+srom "extraction" tools are available in [tools](tools/)
+
+ready to use blobs are available in this repo [openinput-fw/sensor-blobs](https://github.com/openinput-fw/sensor-blobs)
