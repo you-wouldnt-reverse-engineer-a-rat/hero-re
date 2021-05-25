@@ -77,3 +77,7 @@ the hero sensor needs firmware to be uploaded to it at startup, we call this SRO
 srom "extraction" tools are available in [tools](tools/)
 
 ready to use blobs are available in this repo [openinput-fw/sensor-blobs](https://github.com/openinput-fw/sensor-blobs)
+
+## Example Driver
+
+Even though the sensor is not thoroughly documented, we have a working proof of concept [driver](https://github.com/qsxcv/q305/blob/main/hero.h)
