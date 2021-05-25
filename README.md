@@ -65,10 +65,11 @@ address | Funcion | Values | Info
 0x06 | delta y low |  |  signed 16 bit, 2's complement, bot 8
 0x07 | delta x high |  |  signed 16 bit, 2's complement, top 8
 0x08 | delta x low |  | signed 16 bit, 2's complement, bot 8
-0x16 | ? | | seems to be related to surface
- |  |  |
 0x0C | x or y DPI | 0x03 - 0xEF (allowable range might be larger, to be tested) | DPI = (value + 1) * 50
 0x0D | x or y DPI | 0x03 - 0xEF (allowable range might be larger, to be tested) | DPI = (value + 1) * 50
+0x16 | ? | | seems to be related to surface
+0x20 | poll period? | 0x80 = 400Hz, 0x40 = 775Hz, 0x00 = 9.5 KHz | modifying this register changes the poll frequency on the IR Led, it's effects have not been throughly tested
+
 
 ## SROM
 
