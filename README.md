@@ -68,7 +68,7 @@ address | Funcion | Values | Info
 0x0C | x or y DPI | DPI = (value + 1) * 50 | 0x03 - 0xEF (allowable range might be larger, to be tested)
 0x0D | x or y DPI | DPI = (value + 1) * 50 | 0x03 - 0xEF (allowable range might be larger, to be tested)
 0x16 | ? | | seems to be related to surface
-0x20 | poll period? | period = 20us * value, floor of 100us | modifying this register changes the poll frequency on the IR Led
+0x20 | frame poll period | period = 20us * value, floor of 100us | modifying this register changes the poll frequency on the IR Led
 
 
 ## SROM
