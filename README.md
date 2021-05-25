@@ -58,17 +58,17 @@ Consecutive writes are apparently allowed
 
 ## Registers
 
-address | Funcion | Values | Info
-:---: | :---: | :---: | :---:
-0x00 | ? |  | Status or flag register?
-0x05 | delta y high |  | signed 16 bit, 2's complement, top 8
-0x06 | delta y low |  |  signed 16 bit, 2's complement, bot 8
-0x07 | delta x high |  |  signed 16 bit, 2's complement, top 8
-0x08 | delta x low |  | signed 16 bit, 2's complement, bot 8
-0x0C | x or y DPI | DPI = (value + 1) * 50 | 0x03 - 0xEF (allowable range might be larger, to be tested)
-0x0D | x or y DPI | DPI = (value + 1) * 50 | 0x03 - 0xEF (allowable range might be larger, to be tested)
-0x16 | ? | | seems to be related to surface
-0x20 | frame poll period | period = 20us * value, floor of 100us | modifying this register changes the poll frequency on the IR Led
+address | Funcion | Values | Default | Info
+:---: | :---: | :---: | :---: | :---:
+0x00 | ? |  |   | Status or flag register?
+0x05 | delta y high |  |  | signed 16 bit, 2's complement, top 8
+0x06 | delta y low |  |  | signed 16 bit, 2's complement, bot 8
+0x07 | delta x high |  |  | signed 16 bit, 2's complement, top 8
+0x08 | delta x low |  |  | signed 16 bit, 2's complement, bot 8
+0x0C | x or y DPI | DPI = (value + 1) * 50 |  | 0x03 - 0xEF (allowable range might be larger, to be tested)
+0x0D | x or y DPI | DPI = (value + 1) * 50 |  | 0x03 - 0xEF (allowable range might be larger, to be tested)
+0x16 | ? |  |  | seems to be related to surface
+0x20 | frame poll period | period = 20us * value, floor of 100us | 0x32 | modifying this register changes the poll frequency on the IR Led
 
 
 ## SROM
