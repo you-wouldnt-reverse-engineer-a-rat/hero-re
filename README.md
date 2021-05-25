@@ -43,6 +43,19 @@ Parameter | Value | Unit
 :---: | :---: | :---:
 Clock Frequency | 4.0 | MHz
 
+Read and write operations are determined by bit 8, the following 7 bits provide the address of the opperation
+
+ Value | Operation
+:---: | :---:
+1 | Read
+0 | Write
+
+The following 8 bits are data, either from the host in a write, or to the host in a read
+
+In a read, during the data phase, another address can be sent with the read bit set, allowing consecutive reads
+
+Consecutive writes are apparently allowed
+
 ## Registers
 
 address | Funcion | Values | Info
