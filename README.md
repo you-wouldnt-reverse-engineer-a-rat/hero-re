@@ -61,6 +61,7 @@ Consecutive writes are apparently allowed
 address | Function | Values | Default | Info
 :---: | :---: | :---: | :---: | :---:
 0x00 | ? |  |   | Status or flag register?
+0x03 | ? |  | 0x20 usually, switches between 0x30 and 0x20 in sleep, 0x28 in deep sleep | when 0x28, rest mode is active after ~1 second inactivity, irrespective of reg 0x22 and has frame period 8 times greater than specified in reg 0x21.
 0x05 | delta y high |  |  | signed 16 bit, 2's complement, top 8
 0x06 | delta y low |  |  | signed 16 bit, 2's complement, bot 8
 0x07 | delta x high |  |  | signed 16 bit, 2's complement, top 8
@@ -68,7 +69,9 @@ address | Function | Values | Default | Info
 0x0C | y DPI | DPI = (value + 1) * 50 |  | 0x00 - 0xFF (50 - 12800 DPI)
 0x0D | x DPI | DPI = (value + 1) * 50 |  | 0x00 - 0xFF (50 - 12800 DPI)
 0x16 | ? |  |  | seems to be related to surface
-0x20 | frame poll period | period = 20us * value, floor of 100us | 0x32 | modifying this register changes the poll frequency on the IR Led
+0x20 | maximum frame period (run) | period = 20us * value, floor of 100us | 0x32 = 50 (1000 fps) | when in motion, frame period may be lower than this value. in other words, framerate increases when in motion. if value <= 5, tracking at slow speeds suffers. no obvious difference in slow speed tracking quality for value >= 6.
+0x21 | frame period (rest) | period = 80us * value | ? |
+0x22 | run-to-rest timeout | (0.5 * value + 1) seconds | 0xc8 = 200 |
 
 
 ## SROM
