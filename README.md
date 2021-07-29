@@ -2,6 +2,8 @@
 
 Reverse engineering of the HERO sensor used by Logitech mice
 
+The Hero is a sensor developed in house by Logitech, it's a follow up to the mercury sensor.
+
 ## Pin Configuration
 
 ![g305-hero](assets/g305-hero.png)
