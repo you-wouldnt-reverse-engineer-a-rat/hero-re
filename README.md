@@ -84,6 +84,12 @@ srom "extraction" tools are available in [tools](tools/)
 
 ready to use blobs are available in this repo [openinput-fw/sensor-blobs](https://github.com/openinput-fw/sensor-blobs)
 
+## Sensor "overclocking"
+
+by default the hero sensor in the g305 is configured to run at roughly 1000 frames/s, and scales up to 12000 frames/s depending on the motion speed.
+
+apparently, register 0x20 controls the maximum frame period (and hence, the minimum framerate) and can be set such that the minimum framerate is slightly above 8000 frames/s.
+
 ## Example Driver
 
-Even though the sensor is not thoroughly documented, we have a working proof of concept [driver](https://github.com/qsxcv/q305/blob/main/hero.h)
+Even though the sensor is not thoroughly documented, we have a working proof of concept [driver](https://github.com/qsxcv/q305/blob/main/mouse/hero.h)
